@@ -3,14 +3,14 @@ services:
   devops:
     image: satishjagana:cyient:latest
     ports:
-      - "8000:80"
+      - "9000:80"
     volumes:
       - Cyientvolume
 
   chatgpt:
     image: satishjagana/chatgpt:latest 
     ports:
-      - "8001:80"
+      - "9001:80"
     volumes:
       - chatgptvolumes
 
