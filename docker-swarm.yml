@@ -1,0 +1,17 @@
+version: "3"
+services:
+  devops:
+    image: satishjagana:cyient:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - "Cyientvolume"
+  deploy:
+    replicas: 3
+
+    chatgpt:
+      - "8001:80"
+    volumes:
+      - "chatgptvolumes"
+    deploy:
+      replicas: 3
