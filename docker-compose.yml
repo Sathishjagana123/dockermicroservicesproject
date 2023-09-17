@@ -1,4 +1,3 @@
-
 version: "3"
 services:
   devops:
@@ -6,14 +5,15 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - "Cyientvolume"
-  deploy:
-    replicas: 3
+      - Cyientvolume
 
-    chatgpt:
+  chatgpt:
+    image: chatgptimage:latest
+    ports:
       - "8001:80"
     volumes:
-      - "chatgptvolumes"
-    deploy:
-      replicas: 3
-~
+      - chatgptvolumes
+
+deploy:
+  replicas: 3
+
